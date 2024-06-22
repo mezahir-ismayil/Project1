@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+div {
+    border: solid 3px;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    margin: 100px;
+    position: relative;
+    overflow: hidden;
+   transition: 1s;
+}
+
+div::before {
+    content: "";
+    background-color: blue;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -200px;
+    z-index: -1;
+    transition: 1s;
+}
+div:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: 1s;
+}
